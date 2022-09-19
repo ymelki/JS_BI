@@ -18,7 +18,28 @@ console.log("je test le JS ! ")
 prenom="Yoel"; // chaine de caractere / string
 age = 35; // Numérique : sans guillemet
 
-console.log("Je m'appelle " + prenom + ". et j'ai " + age + " ans.");
 
 // concatenations
 
+console.log("Je m'appelle " + prenom + ". et j'ai " + age + " ans.");
+
+// EXO 
+SEL=100;
+SUCRE=120;
+
+console.log("j'ai du sel :" + SEL);
+console.log("j'ai du sucre :" + SUCRE);
+
+// VOUS ECRIVEZ DU CODE : INVERSER LES VARIABLES
+// TEMP Qui correspond à la nouvelle bouteille !
+TEMP=SEL;
+console.log(TEMP);
+// Le sel recoit la valeur de sucre
+SEL=SUCRE; 
+console.log(SEL);
+
+SUCRE=TEMP;
+
+
+console.log("j'ai du sel :" + SEL);
+console.log("j'ai du sucre :" + SUCRE);
