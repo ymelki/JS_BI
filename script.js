@@ -249,16 +249,22 @@ console.log(ordinateur);
 // boucle while 
 // tester qu on ai 6 chances
 // qu on ai bien ecrit un nombre si non on redemande d ecrire
-// sans perdre un chance
+// sans perdre une chance et ce que le nombre compris entre 1
+// et 100
+let k =0;
 
-for (let i=0; i<=6; i++){
+while ( (k <=6)   ) {
+    let check=1;
+    console.log("nb chance : "+k);
     let utilisateur = prompt("devinez un nb entre 1 et 100?");
     console.log(utilisateur);
     console.log(typeof utilisateur);
     console.log(isNaN(utilisateur));
-    if (isNaN(utilisateur) == true){
-        console.log("Vous devez écrire un nombre !")
-    } else {
+    if ((isNaN(utilisateur) == true) ||  (utilisateur<0 ) ||  (utilisateur>100 )  ){
+        console.log("Vous devez écrire un nombre entre 0 et 100 !")
+        check=0;
+    } 
+    else {
         utilisateur=parseInt(utilisateur);
     }
     // condition 1 == 2 > 3 <
@@ -275,6 +281,10 @@ for (let i=0; i<=6; i++){
         console.log("Trop petit ! Essayez un chiffre plus grand !  ")
 
     }
+    if (check==1) {
+        k++;
+    }
+
 }
 /*
 3. Vous devez coder un petit jeu. 
