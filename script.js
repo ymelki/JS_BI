@@ -251,9 +251,37 @@ console.log(ordinateur);
 // qu on ai bien ecrit un nombre si non on redemande d ecrire
 // sans perdre une chance et ce que le nombre compris entre 1
 // et 100
+
+
+// TANT que 
+// le niveau correspondu bien à un type nombre =1
+// 2
+// 3 alors a ce moment la je propose d'aller dans la 2 boucle 
+niveau=10;
+while(
+    ((  niveau != 0 ) && (  niveau != 1 ) && (  niveau != 2 ) && (  niveau != 3 ))){
+        niveau = prompt("Niveau : 1 facile , Niveau 2 : Moyen , Niveau 3 : Difficile");
+    console.log(niveau);
+   
+        if (niveau==1) {
+            fin = 20;
+        }
+        if (niveau==2) {
+            fin = 10;
+        }
+        if (niveau==3) {
+            fin = 5;
+        }
+
+    } 
+
 let k =0;
 
-while ( (k <=6)   ) {
+
+while ( (k <=fin)   ) {
+    if (niveau==0) { 
+        k--;
+    }
     let check=1;
     console.log("nb chance : "+k);
     let utilisateur = prompt("devinez un nb entre 1 et 100?");
