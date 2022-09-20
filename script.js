@@ -216,7 +216,66 @@ console.log(resultat);
 // EXO :
 // une variable nb=5
 // 1+2+3+4+5
+let nb2=5
+let resultat2=0; // ACCUMULATION
+// 5 => 1 * 2 * 3 * 4  * 5
+for (let i=1; i<=nb2 ; i++){
+    resultat2=resultat2+i;
+    console.log(i);
+}
+console.log("--"+resultat2);
 
+// BOUCLE WHILE
+// 1 DEMARRAGE DE LA BOUCLE 0 INITIALISATION
+// 2 CONDITION DE FIN DE BOUCLE
+// 3 INCREMENTATION : A CHAQUE TOUR DE BOUCLE DE COMBIEN D ITERE
+
+for (let i=1; i<10 ; i++){ 
+    console.log(i);
+}
+
+let i=1;
+while( i < 10 ){
+    console.log(i);
+    i++;
+}
+
+
+// RENVOIE UN NOMBRE ENTRE 1 ET 100
+
+let ordinateur = Math.floor(Math.random() * 100) + 1;
+console.log(ordinateur);
+
+// boucle while 
+// tester qu on ai 6 chances
+// qu on ai bien ecrit un nombre si non on redemande d ecrire
+// sans perdre un chance
+
+for (let i=0; i<=6; i++){
+    let utilisateur = prompt("devinez un nb entre 1 et 100?");
+    console.log(utilisateur);
+    console.log(typeof utilisateur);
+    console.log(isNaN(utilisateur));
+    if (isNaN(utilisateur) == true){
+        console.log("Vous devez écrire un nombre !")
+    } else {
+        utilisateur=parseInt(utilisateur);
+    }
+    // condition 1 == 2 > 3 <
+    if (  utilisateur === ordinateur   ) {
+        console.log("Bravo ! ");
+        break;
+
+    }
+    if (   utilisateur > ordinateur  ) {
+        console.log("Top grand ! Essayez un chiffre plus petit !  ")
+
+    }
+    if (   utilisateur < ordinateur  ) {
+        console.log("Trop petit ! Essayez un chiffre plus grand !  ")
+
+    }
+}
 /*
 3. Vous devez coder un petit jeu. 
 a. Créer une variable 'ordinateur' 
