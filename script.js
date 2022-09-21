@@ -275,9 +275,7 @@ while(
 
     } 
 
-let k =0;
-
-
+let k =0; 
 while ( (k <=fin)   ) {
     if (niveau==0) { 
         k--;
