@@ -100,7 +100,71 @@ EXO 1 : une fonction qui calcule la moyenne d'un tableau
 EXO 2 : une fonction qui calcule le max d'un tableau
 EXO 3 : une fonction qui calcule le min d'un tableau
 Exo 4 : une fonction qui demande le niveau d'un jeu et qui renvoie son niveau
-Exo 5 : une fonction qui inverse les lettres d'une chaine de caractere
-Exo 6 : une fonction qui renvoie true ou false si une chaine de caractere est un palindrome.
+Exo 5 : une fonction qui inverse les lettres
+ d'une chaine de caractere
+Exo 6 : une fonction qui renvoie true ou false si une chaine
+ de caractere est un palindrome.
 Exo 7 : une fonction qui trie un tableau de nombre
+// il faudra une fonction d'échanger de valeur
+//                        qui recupère l'indice du min d'un tableau
 **/
+
+// def
+function moyenne(tab){
+    let somme=0;
+    for (let i = 0 ; i < tab.length; i++){
+        somme=somme+tab[i];
+
+    }
+    moyenne=somme/tab.length;
+    return moyenne;
+    
+}
+
+
+function max(tab){
+    let max=0;
+    for (let i = 0 ; i < tab.length; i++){
+        if (tab[i] > max){
+            max=tab[i];
+        }
+    }
+    return max;
+}
+
+
+
+function min(tab){
+    let min=99999;
+    for (let i = 0 ; i < tab.length; i++){
+        if (tab[i] < min){
+            min=tab[i];
+        }
+    }
+    return min;
+}
+
+function inverse(chaine){
+    let chaineinverse="";
+    for (let i = chaine.length - 1; i >=0; i--){
+        chaineinverse=chaineinverse+chaine[i];
+    }
+    return chaineinverse;
+}
+
+function palindrome(chaine1,chaine2){
+    if (chaine1 == inverse(chaine2)  ){
+    return true;
+    }
+    else{
+    return false;
+    }
+}
+//appel
+console.log(moyenne([0,20]));
+
+console.log(max([0,20]));
+
+console.log(min([0,20]));
+
+console.log(inverse("bonjour ! "));
