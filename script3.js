@@ -105,7 +105,7 @@ Exo 5 : une fonction qui inverse les lettres
 Exo 6 : une fonction qui renvoie true ou false si une chaine
  de caractere est un palindrome.
 Exo 7 : une fonction qui trie un tableau de nombre
-// il faudra une fonction d'échanger de valeur
+// il faudra une fonction d'échanger de valeur d'un tableau
 //                        qui recupère l'indice du min d'un tableau
 **/
 
@@ -168,3 +168,63 @@ console.log(max([0,20]));
 console.log(min([0,20]));
 
 console.log(inverse("bonjour ! "));
+
+// il faudra une fonction d'échanger de valeur d'un tableau
+//                        qui recupère l'indice du min d'un tableau
+
+function min_tab(tab,k){
+    min=999;
+    j=100;
+    for (let i=k; i < tab.length; i++){
+        if (tab[i]<min){
+            min=tab[i];
+            j=i;
+        }
+
+    }
+    return j ;
+
+}
+
+//console.log(min_tab([12,34,2,0,56]));
+
+console.table(echange3_tab([12,34,32,35,15] , 0, 4    ));
+
+
+function trie_test(tab){
+
+    for (n=0; n< tab.length;n++){
+        for (let i=n; i< tab.length;i++){
+            indice=min_tab(tab,n);
+            console.log(indice);
+            echange3_tab( tab , n,indice   );
+        }
+        n++;
+    }
+    
+        return tab;
+}
+
+
+function trie_test2(tab){
+
+    for (n=0; n< tab.length;n++){
+            indice=min_tab(tab,n);
+            console.log(indice);
+            echange3_tab( tab , n,indice   );
+    
+    }
+    
+    return tab;
+}
+console.log(min_tab([3,2,45,34,56],1));
+console.table([3,2,45,34,56]);
+console.table(trie_test2([3,2,45,34,56]));
+//console.table(trie_test([3,2,45,34,56]))
+for (let n=0;n<tab.length;){
+
+}
+indice=min_tab(tab,n);
+            indice=min_tab(tab,n);
+            console.log(indice);
+            echange3_tab( tab , n,indice   );
